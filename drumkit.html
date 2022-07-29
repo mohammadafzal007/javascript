@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #key {  
+        font-size: 100px;
+        animation: key 0s linear 1;
+    }
+
+    @keyframes key {
+        from {
+            font-size: 30px;
+        }
+
+        to {
+            font-size: 70px;
+        }
+    }
+*{
+    margin: 0;padding: 0;
+}
+    .container {
+
+        width:100vw;
+        height:100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        background:linear-gradient(to right,red,white,blue)
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 id="key"></h1>
+    </div>
+    <audio data-key="65">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="66">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="67">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="68">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="69">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="70">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="71">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="72">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="73">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="74">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="75">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="76">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="77">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="78">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="79">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="80">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="81">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="82">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="83">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="84">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+    <audio data-key="85">
+        <source src="horse.ogv" type="audio/mp3">
+    </audio>
+</body>
+
+<script>
+    let heading = document.getElementById("key");
+
+    // let sound1 = document.getElementById("sound1");
+    window.addEventListener("keydown", function (e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        heading.innerHTML=e.key;
+        audio.play();
+        // audio.pause();
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const jsonstr='{"name":"afzal","id":"40","afzal02589@gmail.com":"afzal"}';
+    // const replacer=(key,value)=>{
+    //     if(value==='undefined')
+    //     return 
+    // }
+    let str=JSON.parse(jsonstr);
+    console.log(str);
+    let jsonstr1=JSON.stringify(str);
+    console.log(jsonstr1);
+
+
+    let userObj = {
+  name: "Sammy",
+  email: "sammy@example.com",
+  plan: "Pro"
+};
+
+function replacer(key, value) {
+  console.log(typeof value);
+  if (key === 'email') {
+    return undefined;
+  }
+  return value;
+}
+
+let userStrReplacer = JSON.stringify(userObj, replacer);
+console.log(userStrReplacer);
+const jsonstr3=JSON.parse(userStrReplacer);
+console.log(jsonstr3)
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<html>
+<head>
+
+    <title>
+String
+    </title>
+ 
+</head>
+
+<body>
+    <div class="c1">
+        <h1 class="c2" align="center">Hello Welcome To MCU</h1>
+        <P id="id1">Marvel  is a Worlds Best Studio</P>
+    </div>
+    <script>
+        let b=document.getElementById("id1");
+        b.innerHTML="AFZAL";
+        b.outerHTML="bye";
+        document.write(b);
+console.log(b);
+
+let c=document.getElementsByClassName("c2")[0];
+c.align="left";
+
+// document.getElementById("id1").style.background="green";
+
+console.log(c);
+
+let d=document.getElementsByTagName("div");
+
+console.log(d);
+        /*var a="ItzAfzalJamesbond";
+    var b=a.length;
+    console.group('Start');
+    console.log(b);
+    console.log(a.indexOf("Afzal"));
+    console.log(a.lastIndexOf("Afzal"));
+    console.log(a.includes("Afzal"));
+    console.log(a.includes("Bond"));
+    console.log(a.startsWith("Bond"));
+    console.log(a.endsWith("bond"));
+     console.table({'AFZAL':'BCA','DAMAN':'BCA'});
+    console.groupEnd('End');
+    console.log('end'); */
+//     const s="javascriptloops";
+//     let s2="";
+// for(let i=0;i<s.length;i++)
+// {
+//     if(s.charAt(i)==='a'||s.charAt(i)==='i'||s.charAt(i)==='e'||s.charAt(i)==='o'||s.charAt(i)==='u')
+//         {
+//             console.log(s.charAt(i));
+//         }
+//         else
+//         {s2+=(s.charAt(i));}
+        
+// }
+// for(let i=0;i<s2.length;i++)
+// {
+// console.log(s2.charAt(i));
+// }
+
+function getLetter(s) {
+    let letter;
+    // Write your code here
+    switch(true){
+        case 'aeiou'.includes(s[0]):
+            letter='A';
+            break;
+        
+            case 'bcdfg'.includes(s[0]):
+            letter='A';
+            break;
+
+     case 'hjklm'.includes(s[0]):
+            letter='A';
+            break;
+
+            case 'npqrstvwxyz'.includes(s[0]):
+            letter='A';
+            break;
+    }
+    
+    return letter;
+}
+s="adjdjd";
+console.log(getLetter(s));
+
+const arr=[1,2,3,3,2,5,6];
+console.log(typeof(arr))
+const newarr=new Set(arr);
+console.log( newarr);
+const arr1=[1,2,2,3,4,4,5,6,7,7,8,9];
+const newarr1=arr1.filter((item,index)=>
+    arr1.indexOf(item)===index
+);
+console.log((newarr1))
+const []=newarr1;
+console.log(x)
+console.log(y)
+console.log(z)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <tile>Date</tile>
+    </head>
+    <body>
+        <p id="id1"> </p>
+    <script>
+
+var date=new Date();  //24 hr=86400000
+document.write(date.toDateString());
+document.write("<br>");
+document.getElementById("id1").innerHTML=date;
+console.log(date);
+document.write(date.toString());
+
+
+console.log(date.toDateString()   +   date.toLocaleTimeString());
+console.log(date.getDate());
+console.log(date.getDay());
+console.log(date.getMonth() +1);
+console.log(date.getFullYear());
+console.log(date.getTime());
+console.log(date.getHours());
+console.log(date.getMinutes());
+console.log(date.getSeconds());
+
+date.setDate(13);
+date.setMonth(4);
+date.setFullYear(2022);
+//date.setTime(18);
+date.setHours(18);
+date.setMinutes(50);
+date.setSeconds(40);
+document.getElementById("id1").innerHTML=date;
+
+
+
+//console.log(date.toDateString());  //it gives PROPER dtae as Sat May 14 2022
+console.log(date);
+
+
+    </script>
+</body>
+</html>

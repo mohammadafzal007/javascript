@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background-image: linear-gradient(to right, red,yellow,blue);
+    }
+        .para{
+            display:block;
+            border:5px solid red;
+            font-size:30px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            font-weight:light;
+            /*color:rgb(60, 255, 0); */
+            background-color: rgb(255, 0, 98);
+            border-radius: 40px;
+            margin:10px;
+            padding:40px;
+            text-transform:capitalize;
+            text-decoration:underline;
+            
+            text-shadow:0px 5px 0px pink;
+            
+        }
+.div{
+    
+    margin-top:25px;
+    margin-left:800px;
+   
+}
+        .bt{
+        background-color: aqua;
+      
+        border:5px solid rgb(0, 89, 255);
+        border-radius:50%;
+
+        width:80px;
+        height:80px;
+        margin:5px;
+       
+        }
+        .bt1{
+    
+            transition-property: width,height;
+            transition-duration:2s;
+            transition-delay:0s;
+            transition-timing-function: linear;
+        }
+        .bt2{
+            transition-property: width,height;
+            transition-duration:2s;
+            transition-delay:0s;
+            transition-timing-function: linear;
+        }
+        .bt3{
+            transition-property: width,height;
+            transition-duration:2s;
+            transition-delay:0s;
+            transition-timing-function: linear;
+        }
+        .bt1:hover{
+            background-color:red;
+            width:150px;
+            height:150px;
+        }
+        .bt2:hover{
+            background-color:rgb(102, 255, 0);
+            width:150px;
+            height:150px;
+        }
+        .bt3:hover{
+            background-color:rgb(255, 0, 157);
+            width:150px;
+            height:150px;
+        }
+        .menu{
+        display:flex;
+        
+        border-radius: 100px;
+        
+
+        }
+        a{
+           flex:1;
+            padding: 0.5em;
+            border:1px solid black;
+            transition:all 0.5s linear ;
+            background: #333;
+            color:#fff;
+            text-align:center;
+            font-size:30px;
+        }
+        a:hover,a:focus{
+background:#fff;
+color:#333
+        }
+       
+      
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        
+        <a href="#" onmouseover="onmover()" onmouseout="onmout()" id="a1">Home</a>
+        <a href="#" onmouseover="onmover()" onmouseout="onmout()" id="a2">About</a>
+        <a href="#" onmouseover="onmover()" onmouseout="onmout()" id="a3">Contact</a>
+        
+      </nav> 
+      <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, pariatur adipisci a tempora magnam molestias culpa vero, expedita dolorum eaque qui cumque nihil voluptatem ratione ipsum laudantium iure excepturi quia consequuntur iste recusandae. Exercitationem, optio ipsam debitis facilis, tenetur veritatis consequatur eveniet quos, dolore odit fugit iste architecto. Beatae quaerat sapiente ipsam officiis quae, optio illo vel debitis dignissimos culpa numquam neque, velit reprehenderit ratione esse, atque cupiditate minima sunt dolorum! Perferendis consectetur libero ducimus minus ab corrupti quas atque ipsa debitis dolores. Debitis, quae nisi. Dolores fugiat id sunt voluptatum nihil officiis. Hic, voluptates debitis quos magnam amet veniam.</p>
+      <div class="div">
+          <button class="bt1 bt"  id="id2" onclick="hoverclick()"></button>
+          <button class="bt bt2" onclick="hoverclick()"></button>
+          <button class=" bt bt3" onclick="hoverclick()" ></button>
+      </div>
+    <script>
+        function hoverclick()
+        {
+let a=document.getElementsByClassName("para")[0];
+
+let b=["yellow","brown","green","red","pink","skybue","#ff5678","black","violet","grey","wine"];
+
+
+a.style.background=b[Math.floor(Math.random()*11)];
+
+        }
+  
+
+  let b=document.getElementsByTagName("body");
+  console.log(b);
+  let c=document.createElement("p");
+  c.innerText="HELLO i M neW HERE";
+  b[0].appendChild(c);
+  b[0].classList.add("h1");
+ let x=document.createElement("a");
+ x.innerText="Hello";
+ b[0].appendChild(x);
+ x.style.color="red";
+ x.style.borderRadius="50px";
+ x.setAttribute("href","https://www.w3schools.com");
+x.style.fontSize="50px";
+x.style.display="block";
+x.style.textAlign="left"
+
+
+ c.style.backgroundImage="linear-gradient(to right,red,yellow,blue)"
+ c.style.width="400px";
+ c.style.height="200px";
+ c.style.fontSize="40px";
+ c.style.fontFamily="Verdana";
+ c.style.borderRadius="20px";
+ c.style.textAlign="center";
+ c.style.padding="70px";
+ 
+
+
+
+
+let d=document.createElement("hr");
+
+
+
+
+console.log(document.body);
+
+console.log(document.doctype);
+
+console.log(document.documentElement);
+console.log(document.domain);
+console.log(document.images);
+console.log(document.links);
+console.log(document.scripts);
+console.log(document.title);
+console.log(document.lastModified);
+let  e=document.getElementsByClassName("menu");
+e.class="meena";
+e.class="menu";
+let v=document.querySelector('.bt');
+console.log(v);
+let w=document.querySelectorAll('.bt');
+console.log(w);
+    </script>
+  
+    <br>
+    
+    <!-- <nav>
+        <h2>Navigation</h2>
+        <p>You are on my home page. To the north lies <a href="/blog">my
+        blog</a>, from whence the sounds of battle can be heard. To the east
+        you can see a large mountain, upon which many <a
+        href="/school">school papers</a> are littered. Far up thus mountain
+        you can spy a little figure who appears to be me, desperately
+        scribbling a <a href="/school/thesis">thesis</a>.</p>
+        <p>To the west are several exits. One fun-looking exit is labeled <a
+        href="https://games.example.com/">"games"</a>. Another more
+        boring-looking exit is labeled <a
+        href="https://isp.example.net/">ISP™</a>.</p>
+        <p>To the south lies a dark and dank <a href="/about">contacts
+        page</a>. Cobwebs cover its disused entrance, and at one point you
+        see a rat run quickly out of the page.</p>
+      </nav>-->
+
+    <!-- <nav>
+          
+        <a>
+            <li>HTML </li>
+            <li>CSS</li>
+            <li>Javascript </li>
+        </a>
+    </nav> -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> 
+<h1 id="id">Hello</h1>
+<h2>I m here</h2>
+</body>
+</html>

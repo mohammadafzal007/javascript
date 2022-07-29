@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Maximum of two Number </title>
+</head>
+<body >
+
+<center>   
+    <h1 id="h1"><ins>Welcome To My First Javascript Program</ins></h1>
+    <form name>
+        <label for="num1" >Enter Number 1</label>
+        <input type="text"  id="num1" name="num1">
+        <br>
+        <br>
+        <label for="num2" >Enter Number 2</label>
+        <input type="text"  id="num2" name="num2">
+        <br>
+        <br>
+        <button type=onclick="sum()">Click to Find Sum</button>
+        <p id="sum"></p>
+    </center>
+    </form>
+    <script >
+        function sum()
+        {
+    
+        
+        let a=parseInt(document.getElementById("num1").value);
+       let b=parseInt(document.getElementById("num2").value);
+   let sum=a+b;
+
+
+    
+    document.getElementById("sum").innerHTML=sum;
+}     
+    </script>
+
+    
+</body>
+
+
+</html>

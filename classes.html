@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class car {
+            constructor(name, model, price) {
+                this.name = name;
+                this.model = model;
+                this.price = price;
+            }
+            show_car() {
+               return (name + model +price);
+            }
+        }
+        let obj1 = new car("BMW", "XUV", 100000);
+        console.log(obj1.name);
+        console.log(obj1.model);
+        console.log(obj1.price);
+        console.log(obj1.show_car());
+
+
+    </script>
+</body>
+
+</html>

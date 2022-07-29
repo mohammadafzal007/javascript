@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    background-color: #2874f0;
+    border:none;
+    height:10vh;
+    display:flex;
+    justify-content: space-between;
+}
+.header img{
+    width:75px;
+    height:20px;
+    position:relative;
+    left:18vw;
+    margin-top: 10px;
+   
+}
+.search{
+    display:flex;
+    position:relative;
+    left:15rem;;
+    
+}
+.search input{
+    border:none;
+    width:25vw;
+    height:7vh;
+    margin-top: 6px;
+    outline: none;
+
+}
+.search #search-btn{
+   width:4vw;
+   height:7vh;
+   margin-top: 6px;
+border:none;
+background-color: white;
+cursor:pointer;
+}
+.login-btn{
+    color:#2874f0;
+    position:relative;
+    left:20%;
+    
+    margin-top: 13px;
+    width:8rem;
+    height:2rem;
+    padding:5px 40px;
+    font-weight: 500;
+    background-color: #fff;
+    cursor:pointer;
+    border:1px solid #dbdbdb;
+    border-radius: 2px;
+    font-size:18px;
+
+    
+}
+.explore-plus a{
+    position:relative;
+    left:17vw;
+    top:-15px;
+    font-style:italic;
+    font-size:15px;
+    font-weight:100;
+    color:white;
+    text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.explore-plus a:hover{
+text-decoration: underline;
+    
+}
+.explore-plus img{
+    position:relative;
+    left:17vw;
+    height:13px;
+    width:12px;
+    top:-17px;
+    
+} 

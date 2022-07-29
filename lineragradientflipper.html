@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: linear-gradient(#465984, #786786, #784573);
+
+
+        }
+
+        .heading {
+            text-align: center;
+            text-decoration: underline;
+            font-family: verdana;
+            margin: 20px;
+            position: relative;
+            top: 0px;
+            text-shadow: rgb(255, 255, 255) 2px 0, cyan 2px 0;
+        }
+
+        .box {
+            border: 2px solid black;
+            width: 50vw;
+            height: 30vh;
+            margin: 300px;
+
+
+        }
+
+        .heading2 {
+
+            text-align: center;
+            text-decoration: underline;
+            font-family: verdana;
+            font-size: 25px;
+        }
+
+        .btn {
+            width: 10vw;
+            height: 5vh;
+            align-items: center;
+            position: relative;
+            left: 100px;
+            top: 5px;
+            font-family: verdana;
+            font-size: 20px;
+            border-radius: 20px;
+            cursor: pointer;
+
+        }
+
+        #copytext {
+            width: 10vw;
+            height: 5vh;
+            align-items: center;
+            position: relative;
+            left: 200px;
+            top: 5px;
+            font-family: verdana;
+            font-size: 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .container {
+            height: 97vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Linear Gradient Flipper</h1>
+        <div class="box">
+            <h1 class="heading2">Linear Gradient Background:<br><br>
+                <span id="lgb"></span>
+            </h1>
+            <button class="btn">Click Me</button>
+            <button id="copytext" onclick="copytext()">CopyText</button>
+        </div>
+        <script>
+            let colors = ['A', 'B', 'C', 'D', 'E', 'F', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+            let color = document.getElementById("lgb");
+            let button = document.querySelector(".btn");
+            let copytext = document.getElementById("copytext");
+
+            copytext.addEventListener("click", function () {
+                navigator.clipboard.writeText(color.textContent);
+                alert("Text copied");
+
+            })
+            button.addEventListener("click", function () {
+                let hexcolor1 = "#";
+                let hexcolor2 = "#";
+                let hexcolor3 = "#";
+                let lgbg;
+                for (let a = 0; a < 6; a++) {
+                    hexcolor1 += colors[getrandomnumber()];
+                }
+                for (let a = 0; a < 6; a++) {
+                    hexcolor2 += colors[getrandomnumber()];
+                }
+                for (let a = 0; a < 6; a++) {
+                    hexcolor3 += colors[getrandomnumber()];
+                }
+                lgbg = "linear-gradient(" + hexcolor1 + "," + hexcolor2 + "," + hexcolor3 + ")";
+                color.textContent = lgbg;
+                button.style.backgroundImage
+                    = lgbg;
+                copytext.style.backgroundImage
+                    = lgbg;
+                document.body.style.backgroundImage = lgbg;
+                console.log(lgbg);
+
+            })
+
+
+            function getrandomnumber() {
+                return Math.floor(Math.random() * 15);
+            }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            margin-left:400px;
+            margin-top:100px;
+            background-color:red;
+            cursor:pointer;
+            display:flex;
+            width:200px;
+            height:200px;
+            padding:200px;
+            
+        }
+        button:focus,button:hover{
+            background-color:green;
+
+        }
+        body{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" onclick="marvel.activate()"> ClicK ME</button>
+    <script>
+    const marvel={
+name:'IronMan',
+weapon:'Ironsuit',
+activate: function(){
+    /*
+    <!-- console.log("NAME OF CHARACTER " + this.name + '\n' + "Name of WEAPON " + this.weapon);
+    document.write("NAME OF CHARACTER " + this.name + '<br>' + "Name of WEAPON " + this.weapon); */
+    console.log(this);
+    document.write(this.name);
+    console.log(typeof(marvel));
+}
+
+    };
+    console.log(marvel.name);
+    let data=[{id:1,name:"afzal",},{id:2,name:"daman"}];
+    // const obj=[...data];
+    // obj.id=1;
+    // obj.task='Task1';
+    // obj.complete=false;
+    // obj.map(item=>
+    //     console.log(item)
+    // )
+  let data1=data.filter(items=>{
+    return items.id !==1;
+  }
+  )
+  console.log(data1);
+</script>
+</body>
+</html>

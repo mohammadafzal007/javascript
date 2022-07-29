@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #key {  
+        font-size: 100px;
+        /* animation: key 2s linear 1; */
+        transition: all 1.2s;
+        
+    }
+
+  .playing{
+    transform:scale(1.1);
+  }
+*{
+    margin: 0;padding: 0;
+}
+    .container {
+
+        width:100vw;
+        height:100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        background:linear-gradient(to right,red,white,blue)
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 id="key">Tap Any Alphabet</h1>
+    </div>
+    <audio data-key="65">
+        <source src="audio/A.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="66">
+        <source src="audio/B.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="67">
+        <source src="audio/C.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="68">
+        <source src="audio/D.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="69">
+        <source src="audio/E.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="70">
+        <source src="audio/F.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="71">
+        <source src="audio/G.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="72">
+        <source src="audio/H.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="73">
+        <source src="audio/I.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="74">
+        <source src="audio/J.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="75">
+        <source src="audio/K.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="76">
+        <source src="audio/L.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="77">
+        <source src="audio/M.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="78">
+        <source src="audio/N.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="79">
+        <source src="audio/O.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="80">
+        <source src="audio/P.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="81">
+        <source src="audio/Q.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="82">
+        <source src="audio/R.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="83">
+        <source src="audio/S.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="84">
+        <source src="audio/T.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="85">
+        <source src="audio/U.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="86">
+        <source src="audio/V.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="87">
+        <source src="audio/W.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="88">
+        <source src="audio/X.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="89">
+        <source src="audio/Y.mp3" type="audio/mp3">
+    </audio>
+    <audio data-key="90">
+        <source src="audio/Z.mp3" type="audio/mp3">
+    </audio>
+</body>
+
+<script>
+    let heading = document.getElementById("key");
+
+    // let sound1 = document.getElementById("sound1");
+    window.addEventListener("keydown", function (e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        heading.innerHTML=e.key;
+    
+  
+    audio.currenTime=0;
+        audio.play();
+        heading.classList.add('playing')
+        // audio.pause();
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Events</title>
+    </head>
+    <body>
+        <div class="c1" onmouseover="onmouse(this)" onmouseout="outmouse(this)" style="border:5px solid black;background-color:aqua">Mouse Out</div>
+        <br>
+<button id="id1" onclick="clickme()"  style="color:blue;width:300px;height:300px;">Click Me</button>
+  <br>    
+  <br>    
+<p ondblclick="dclick()" id="id2">Double Click Me</p>
+
+<button onmouseup="mup()" onmousedown="mdown()" id="id3" style="background-color:green;color:white;width:500px;height:300px">Click Me</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+Enter Name <input type="text" id="id4" onkeypress="onkeyp()" onkeypress="onkeyp()"></input><BR>
+    <BR>
+
+
+Enter DEPARTMENT <input type="text" id="id5" onkeyup="onkeyu()"></input>
+        <script>
+           function clickme()
+           {
+document.getElementById("id1").style.background="red";
+document.getElementById("id1").style.color="white";
+
+           }
+            function onmouse(obj)
+            {
+obj.innerHTML="Mouse in";
+var a=document.getElementsByClassName("c1");
+a[0].style.background="yellow";
+            }
+            function outmouse(obj)
+            {
+obj.innerHTML="Mouse Out";
+var b=document.getElementsByClassName("c1");
+b[0].style.background="aqua";
+
+
+            }
+            function dclick()
+            {
+            document.getElementById("id2").innerHTML="I m double clicked";
+
+            }
+            function mup()
+            {
+               var a= document.getElementById("id3");
+               a.style.background="green";
+               a.innerHTML="Click Me";
+            }
+            function mdown()
+            {
+               var a= document.getElementById("id3");
+               a.innerText="Chhod bhI ab";
+               a.style.background="yellow";
+               a.style.color="black";
+
+               
+            }
+            function onkeyp()
+            {
+                var a=document.getElementById("id4");
+                a.innerHTML=alert("YOu Pressed on Text Box");
+            }
+            function onkeyd()
+            {
+
+            }
+            function onkeyu()
+            {
+                var a=document.getElementById("id5");
+                a.value=a.value.toLowerCase();
+            }
+            
+            
+        </script>
+    </body>
+</html>

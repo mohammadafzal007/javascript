@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+    <style>
+        #div1 {
+            border: 2px solid red;
+            background-color: yellow;
+        }
+
+        #heading {
+            border: 2px solid red;
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="div1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque eaque odit aspernatur maiores aliquam cum odio
+        rerum eligendi necessitatibus eius. Explicabo, dolores! Placeat, animi labore! Velit delectus earum ea eius.
+
+    </div>
+    <h1 id="heading">Hello Itz Jamesbond</h1>
+    <p id="p1"></p>
+    <script>
+
+
+        function myfunc1() {
+            console.log("mouse over");
+            document.getElementById("p1").innerHTML += "mouseover<br>";
+        }
+        function myfunc2() {
+            console.log("mouse out");
+            document.getElementById("p1").innerHTML += "mouseout <br>";
+        }
+        function myfunc3() {
+            document.getElementById("p1").innerHTML += "Clicked<br>"
+            console.log("clicked");
+        }
+        function myfunc4() {
+
+            console.log("mousemoving");
+            document.getElementById("p1").innerHTML = Math.random();
+        }
+        function myfunc5() {
+            console.log("mouseup");
+        }
+        function myfunc6() {
+            console.log("mousedown");
+        }
+
+        let c = document.getElementById("heading");
+        /*
+        <!-- c.addEventListener('mouseover',myfunc1());
+        c.addEventListener('mouseout',myfunc2()); -->
+        */
+        //c.addEventListener('click',myfunc3);
+        //c.addEventListener('mouseout',myfunc2);
+        //c.addEventListener('mouseover',myfunc1);
+        //c.addEventListener('mousemove',myfunc4);
+        c.addEventListener('mouseup', myfunc5);
+        c.addEventListener('mousedown', myfunc6);
+
+        // sum=(a,b)=>{
+        //   return a+b;
+        //}
+        function sum() {
+            let d = document.getElementById("heading");
+            d.innerText = "Good BYY";
+            d.style.color = "red";
+            d.style.fontSize = "60px";
+
+            d.style.borderRadius = "50px";
+            d.style.width = "200px";
+            d.style.height = "200px";
+        }
+        /*let e=setTimeout(sum,2000);
+        clearTimeout(e);
+        /*let d=setInterval(sum,2000);
+        clearInterval(d); 
+        localStorage.setItem('name', 'Afzal');*/
+        let b = 786;
+        console.log(`This iS Number ${b} `);
+    </script>
+</body>
+
+</html>

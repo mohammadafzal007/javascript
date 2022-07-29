@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .heading{
+           text-align: center;
+           text-decoration:underline;
+           font-family:verdana;;
+       }
+        .container{
+            margin:auto ;
+            justify-content:center;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            background-color: grey;
+            width:60vw;
+            height:20vh;
+            border:2px solid black;
+            padding:10px;
+            margin-top:50vh;;
+        }
+        .btn{
+            width:7em;
+            height:2em;
+            font-size:15px;
+            border-radius:20px;
+            font-family: cursive;
+        }
+      .h1{
+          display:flex;
+          
+      }
+        
+    
+        #copytext {
+            width: 7em;
+            height: 2em;
+            align-items: center;
+            position: relative;
+          
+            top: 0px;
+            font-family: verdana;
+            font-size: 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">RGB Value</h1>
+    <div class="container">
+        <h2>Background Color :
+            <span class="color"> </span>
+        </h2>
+        <button class="btn">Click Me</button>
+        <button id="copytext" onclick="copytext()">CopyText</button>
+    </div>
+    <script>
+  let copytext = document.getElementById("copytext");
+
+copytext.addEventListener("click", function () {
+    navigator.clipboard.writeText(color.textContent);
+    alert("Text copied");
+
+})
+       
+        
+        const color=document.querySelector(".color");
+        const btn=document.querySelector(".btn");
+
+        btn.addEventListener("click",function(   ){
+            let rgbcolor="rgb("+getrandomnumber()+","+getrandomnumber()+","+getrandomnumber()+")";
+            
+            document.body.style.backgroundColor=rgbcolor;
+            console.log(rgbcolor);
+            color.textContent=rgbcolor;
+        })
+        function getrandomnumber()
+        {
+            return Math.floor(Math.random()*256);
+        }
+        
+    </script>
+</body>
+</html>

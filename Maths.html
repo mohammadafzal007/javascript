@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Maths</title>
+    </head>
+    <body>
+        <h1 id="id1" onmouseover="omover()" onmouseout="omout()" onmouseout="rempara()" style="border:5px solid red;background-color:yellow">Maths Methods</h1>
+        <p id="id2"></p>
+        <p id="myText"></p>
+      <form>
+          <input type="button" onclick="Msg1()" value="Msg1" id="myText">
+          <input type="button" onclick="Msg2()" value="Msg2" id="myText">
+      </form>
+        <script>
+            console.log(Math.PI);
+            console.log(Math.LOG2E);
+            console.log(Math.LOG10E);
+            console.log(Math.SQRT2);
+            console.log(Math.round(3.6));
+            console.log(Math.ceil(3.9));
+            console.log(Math.floor(3.2));
+            console.log(Math.trunc(3.3));
+            console.log(Math.sign('1'));
+            console.log(Math.random());
+            var a=Math.random();
+            console.log(a);
+            var b=Math.floor(a*11);  //random from 0-9
+            console.log(b);
+            
+            function Msg1(){
+                document.getElementById('myText').innerHTML = 'Hello World';
+                }
+                function Msg2(){
+                document.getElementById('myText').innerHTML = 'Nice to meet...';
+                }
+                
+               
+            function omover()
+            {
+            var a=document.getElementById("id1");
+            a.style.background="brown";
+            a.style.color="white";
+            a.innerHTML="Chalie Shuru Krte Hain";
+        }
+        function omout()
+        {
+            var a=document.getElementById("id1");
+            a.style.background="yellow";
+            a.style.color="black";
+            a.innerHTML="Maths Methods"; 
+           // var para=document.createElement("p");
+           // para.innerText="Ae TU jaaare" ; 
+          //  document.body.appendChild(para);
+          //  para.remove();
+        }
+
+       
+        </script>
+    </body>
+</html>

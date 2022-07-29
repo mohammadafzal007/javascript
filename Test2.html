@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Animate on click with Javascript!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+}
+</style>
+</head>
+<body>
+
+<p id="animate">Hello World!</p>
+
+<button onclick="beyblade()">Click to Animate</button>
+
+<script>
+function beyblade() {
+let x = document.getElementById("animate")
+x.style.marginLeft = "300px"
+x.style.transition = "1s"
+}
+</script>
+
+</body>
+</html>
